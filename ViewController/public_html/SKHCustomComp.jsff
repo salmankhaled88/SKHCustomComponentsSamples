@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:skh="https://skhcodebook.com/snippetdetails/8mVsoSeHprPDLTxtiObH">
+    <af:panelGroupLayout id="pgl1" layout="vertical">
+        <skh:listViewExpand voName="EmployeesView1" id="lve1">
+            <f:facet name="toolbar">
+                <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b1"/>
+                <af:button actionListener="#{bindings.Rollback.execute}" text="Rollback" immediate="true" id="b2">
+                    <af:resetActionListener/>
+                </af:button>
+            </f:facet>
+            <f:facet name="mainContent">
+                <af:panelGroupLayout id="pgl7" layout="vertical" styleClass="">
+                    <af:outputText id="ot5" value="#{row.FirstName}" styleClass="fw-bold fs-lg"/>
+                    <af:outputText id="ot6" value="#{row.Email}" styleClass="adf-far fa-at"/>
+                    <af:outputText id="ot7" value="#{row.PhoneNumber}" styleClass="text-muted"/>
+                </af:panelGroupLayout>
+            </f:facet>
+            <f:facet name="moreDetails">
+                <af:panelGroupLayout id="pgl9" layout="vertical" styleClass="d-flex justify-content-center">
+                    <af:outputText id="ot8" value="More Details" styleClass="text-muted fs-lg"/>
+                </af:panelGroupLayout>
+            </f:facet>
+        </skh:listViewExpand>
+    </af:panelGroupLayout>
+</ui:composition>

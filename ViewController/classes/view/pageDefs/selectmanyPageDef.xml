@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.22.48" id="selectmanyPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="EmployeesView1" RangeSize="3" DataControl="AppModuleDataControl" id="EmployeesView1Iterator"/>
+    <iterator id="EmployeesViewListViewIterator1" Binds="EmployeesView1" DataControl="AppModuleDataControl"
+              RangeSize="2"/>
+  </executables>
+  <bindings>
+    <list IterBinding="EmployeesView1Iterator" ListOperMode="multiSelect" ListIter="EmployeesView1Iterator"
+          id="EmployeesView1" SelectItemValueMode="ListObject">
+      <AttrNames>
+        <Item Value="EmployeeId"/>
+      </AttrNames>
+      <ListDisplayAttrNames>
+        <Item Value="FirstName"/>
+        <Item Value="LastName"/>
+      </ListDisplayAttrNames>
+    </list>
+    <action IterBinding="EmployeesView1Iterator" id="ExeWithParams"
+            InstanceName="AppModuleDataControl.EmployeesView1" DataControl="AppModuleDataControl"
+            RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="bindfirstname" NDType="java.lang.String" NDValue="#{viewScope.selectionBean.keyword2}"/>
+    </action>
+    <tree IterBinding="EmployeesView1Iterator" id="EmployeesViewRsForm">
+      <nodeDefinition DefName="model.EmployeesView" Name="EmployeesView110" RangeSize="2"/>
+    </tree>
+    <tree IterBinding="EmployeesViewListViewIterator1" id="EmployeesViewListViewExpand">
+      <nodeDefinition DefName="model.EmployeesView" Name="EmployeesViewListViewExpand0" RangeSize="2">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="Salary"/>
+          <Item Value="Email"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <action id="Commit" RequiresUpdateModel="true" Action="commitTransaction" DataControl="AppModuleDataControl"/>
+    <action id="Rollback" RequiresUpdateModel="false" Action="rollbackTransaction" DataControl="AppModuleDataControl"/>
+    <attributeValues IterBinding="EmployeesViewListViewIterator1" id="FirstNameListExpand">
+      <AttrNames>
+        <Item Value="FirstName"/>
+      </AttrNames>
+    </attributeValues>
+    <list Uses="LOV_JobId" StaticList="false" IterBinding="EmployeesView1Iterator" id="JobId"/>
+  </bindings>
+</pageDefinition>

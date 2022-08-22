@@ -1,0 +1,2716 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+@font-face {
+  font-family: 'CorporateS';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../resources/fonts/CorporateS-Regular.ttf');
+}
+
+
+* {
+    text-shadow: none;
+    outline: none;
+}
+.AFDefaultFontFamily:alias {
+    /*font-family: 'Almarai', sans-serif !important;*/
+    font-family: 'CorporateS', sans-serif !important;
+}
+.AFDefaultFontSize:alias {
+    font-size: var(--application-font-size);
+}
+.AFRequiredIconStyle {
+    color: #ff6464;
+}
+body, af|document {
+    background-color: var(--bg-color);
+    overflow-x: hidden !important;
+    background-image: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*body:lang(ar) {
+    text-align: right !important;
+}*/
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+label { /*font-weight: 500;*/ }
+
+/***********************************************************************************************************************
+ *** Genaric Class *****************************************************************************************
+ */
+
+.secondaryBGColor { background-color: var(--secondary-color) !important; }
+
+.adf-px-bar {
+    padding-left: var(--px-bar);
+    padding-right: var(--px-bar);
+}
+
+.adf-mb-container {
+    margin-bottom: var(--mb-container);
+}
+
+.adf-mb-panels {
+    margin-bottom: var(--mb-panels);
+}
+
+.vh-100 {
+    height: 100vh;
+}
+
+.vw-100 {
+    height: 100vw;
+}
+
+/***********************************************************************************************************************
+ *** Modules [Screens] Classes *****************************************************************************************
+ */
+
+/**** Responsive Templates ************************************
+ * PanelHeaderResponsive
+ */
+
+.panelHeaderResponsive {}
+.panelHeaderResponsive .titleIcon {
+    font-size: var(--title1-font-size);
+    color: var(--secondary-color) !important;
+}
+
+/**** main-header ************************************
+ * Style for MainTemp header for all pages(.jsf)
+ */
+.mainHeader {
+    /*height: 80px;*/
+    background-color: #FFF;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/**** CLASS ************************************
+ * Class: main-header-menu
+ * Style for MainTemp menu 
+ * Class: mainHeaderUserPanel
+ * Style user profile panel (shown after clicking on user icon)
+ */
+.mainHeaderUser {
+    height: var(--main-header-user-height);
+    background-color: var(--primary-color);
+    font-size: 12px;
+    color: var(--light-color);
+}
+.mainHeaderUser af|link {
+    height: var(--main-header-user-height);
+    padding: 0px 5px !important ; 
+    text-decoration: none !important;
+    font-size: 12px;
+}
+.mainHeaderUser af|link:hover {
+    background-color: #FFF !important;
+    color: Black !important;
+}
+.mainHeaderUserPanel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px 20px 10px;
+}
+
+/**** mainFooter ************************************
+ */
+.mainFooter {
+    height: 150px;
+    background-color: var(--footer-bg);
+}
+
+
+.line-break-1 {
+overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;  
+}
+.line-break-2 {
+overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+}
+.line-break-3 {
+overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+}
+/**** Titles **************************************************************
+ * Main titles style for all applications titles
+ */
+.pageTitle {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    text-shadow: none;
+    font-weight: 550;
+}
+.pageTitle:before {
+    font-size: 90%;
+}
+.fragTitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    text-shadow: none;
+    font-weight: 500;
+}
+/*.fragTitle:before {
+    content: "\f30b";
+}*/
+.title0 {
+    font-size: var(--title0-font-size);
+}
+.title1 {
+    font-size: var(--title1-font-size);
+}
+.title2 {
+    font-size: var(--title2-font-size);
+}
+.title-text0 {
+    font-size: var(--title0-font-size);
+    color: var(--primary-color) !important;
+    font-weight: 550;
+}
+.title-text1 {
+    font-size: var(--title1-font-size);
+    color: var(--primary-color) !important;
+    font-weight: 550;
+}
+.title-text2 {
+    font-size: var(--title2-font-size);
+    color: var(--secondary-color) !important;
+    font-weight: 600;
+}
+
+/**** Text Sizes ************************************
+*/
+.fs-3x {
+    font-size: var(--font-size-3x);
+}
+.fs-2x {
+    font-size: var(--font-size-2x);
+}
+.fs-xl {
+    font-size: var(--font-size-xl);
+}
+.fs-lg {
+    font-size: var(--font-size-lg);
+}
+.fs-md {
+    font-size: var(--font-size-md);
+}
+.fs-sm {
+    font-size: var(--font-size-sm);
+}
+/**** Text Colors ************************************
+*/
+
+.primaryColor {
+    color: var(--primary-color) !important;
+}
+.stone-gray-color {
+    color: var(--stone-gray-color) !important;
+}
+.secondaryColor {
+    color: var(--secondary-color) !important;
+}
+
+.lightColor {
+    color: var(--light-color)
+}
+
+/**** bg Colors ************************************
+*/
+
+.adf-bg-primary {
+    background-color: var(--primary-color) !important;
+}
+.bg-stone-gray {
+    background-color: var(--stone-gray-color) !important;
+}
+
+.adf-bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.lightColor {
+    background-color: var(--light-color)
+}
+
+
+
+
+
+/*
+ *
+ * ------------------------------------------------------------------[Custom]---[CustYearlyTracker]--
+ * Customize view list
+ */
+
+.CustYearlyTracker {
+    margin-bottom: 1rem
+}
+.CustYearlyTracker .tracking-item {
+    border-left: 1px dashed #e5e5e5;
+    position: relative;
+    /*padding: 2rem 1.5rem .5rem 2.5rem;*/
+    padding: 1rem 2rem;
+    /*margin-left: 3rem;*/
+    margin-left: 2rem;
+    min-height: 5rem
+}
+.CustYearlyTracker .tracking-item .tracking-date {
+    margin-bottom: .5rem
+}
+.CustYearlyTracker .tracking-item .tracking-content .item-label {
+    font-size: var(--font-size-md);
+}
+.CustYearlyTracker .tracking-item .tracking-content {
+    /*padding: 0px 0.5rem .8rem;*/
+    padding: 0px 1rem .8rem;
+}
+.CustYearlyTracker .tracking-item .tracking-content span {
+    display: block;
+}
+.CustYearlyTracker .tracking-item .tracking-icon {
+    /*line-height: 2.6rem;*/
+    line-height: 3.6rem;
+    position: absolute;
+    /*left: -1.3rem;
+    width: 2.6rem;*/
+    /*left: -1.5rem;*/
+    left: -2.1rem;
+    /*width: 3rem;*/
+    width: 4rem;
+    /*height: 2.6rem;*/
+    height: 3.5rem;
+    text-align: center;
+    border-radius: 20%;
+    font-size: var(--font-size-xl);
+    /*background-color: var(--primary-color);*/
+    background-color: rgb(108,117,125,.8);
+    color: #fff !important;
+}
+/*
+ * -----------------------------------------------------------------------[Custom]---[dot-icon]--
+ * Circular section does not have value and display like dot
+ */
+.CustYearlyTracker.dot-icon .tracking-item .tracking-icon {
+    left: -0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    margin-top: 5px;
+}
+.CustYearlyTracker.dot-icon .tracking-item .tracking-content {
+    padding: 0px 0rem 0.8rem;
+}
+
+	
+	
+/**
+ *
+ * ------------------------------------------------------------------[Custom Panels]---[SPECIAL]--
+ * Custom Layouts > Panels
+ */
+
+.panelLight {
+    background-color: var(--panel-light-bg);
+    border: 1px solid var(--border-light-color);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px 20px 15px;
+    margin-bottom: var(--mb-panels);
+    -webkit-box-shadow: var(--panel-shadow);
+    -o-box-shadow: var(--panel-shadow);
+    box-shadow: var(--panel-shadow);
+}
+
+.panelShadow {
+    background-color: #FFF;
+    border: 1px solid var(--border-light-color);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px 20px 15px;
+    margin-bottom: var(--mb-panels);
+    -webkit-box-shadow: var(--panel-shadow);
+    -o-box-shadow: var(--panel-shadow);
+    box-shadow: var(--panel-shadow);
+}
+
+.panelContainer {
+    background-color: var(--light-color);
+    border: 1px solid var(--border-light-color);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px 20px 20px;
+    margin-bottom: var(--mb-panels);
+}
+
+.panelTopBorder {
+    background-color: transparent;
+    border: 1px solid var(--border-light-color);
+    border-top: 3px solid var(--secondary-color);
+    border-radius: var(--panels-border-raduis);
+    padding: 10px 15px;
+    margin-bottom: var(--mb-panels);
+    -webkit-box-shadow: var(--panel-shadow);
+    -o-box-shadow: var(--panel-shadow);
+    box-shadow: var(--panel-shadow);
+}
+
+.AFPanelBorderTop {
+    background-color: transparent;
+    border: 1px solid var(--border-light-color);
+    border-top: 3px solid var(--secondary-color);
+    /*border-radius: var(--panels-border-raduis);*/
+    border-radius: 0px;
+    padding: 10px 15px;
+    margin-bottom: var(--mb-panels);
+    -webkit-box-shadow: var(--panel-shadow);
+    -o-box-shadow: var(--panel-shadow);
+    box-shadow: var(--panel-shadow);
+}
+
+/**** panelDark **************************************************
+ */
+.panelDark {
+    background-color: var(--dark-color);
+    border: 1px solid var(--dark-color);
+    border-radius: var(--panels-border-raduis);
+    padding: 10px 15px;
+    margin-bottom: var(--mb-panels)
+}
+/*Handle PanelHeaderLayout*/
+.panelDark af|panelHeader::title-text0,
+.panelDark af|panelHeader::title-text1,
+.panelDark af|panelHeader::title-text2 {
+    color: var(--secondary-color) !important;
+}
+/*Handle PanelFormLayout*/
+.panelDark af|panelFormLayout::label-cell,
+.panelDark af|panelFormLayout::label-stacked-cell {
+    color: var(--bs-light) !important; /*var(--secondary-color) !important;*/
+}
+.panelDark af|panelFormLayout af|selectOneChoice::content, 
+.panelDark af|panelFormLayout af|inputText::content, 
+.panelDark af|panelFormLayout af|inputFile::content, 
+.panelDark af|panelFormLayout af|inputDate::content, 
+.panelDark af|panelFormLayout af|inputListOfValues::content, 
+.panelDark af|panelFormLayout af|inputFile::content, 
+.panelDark af|panelFormLayout af|selectBooleanCheckbox::content {
+    background-color: var(--light-color) !important;
+}
+.panelDark af|panelFormLayout af|selectOneRadio::content {
+    color: var(--light-color) !important;
+}
+
+/**** pageInfoPanel ************************************
+ */
+.pageInfoPanel, .pageBasicDataPanel {
+    border-radius: 20px;
+    padding: 15px 25px;
+}
+.pageInfoPanel {
+    background-color: var(--primary-color);
+    text-align: justify;
+    text-justify: inter-word;
+    color: var(--light-color);
+}
+.pageInfoPanel label,
+.pageInfoPanel af|panelHeader::title-text0,
+.pageInfoPanel af|panelHeader::title-text0:before {
+    color: #FFF !important;
+}
+/*Handle PanelFormLayout*/
+.pageInfoPanel af|panelFormLayout::label-cell,
+.pageInfoPanel af|panelFormLayout::label-stacked-cell {
+    color: #FFF !important;
+}
+.pageInfoPanel af|panelFormLayout af|selectOneChoice::content, 
+.pageInfoPanel af|panelFormLayout af|inputText::content, 
+.pageInfoPanel af|panelFormLayout af|inputFile::content, 
+.pageInfoPanel af|panelFormLayout af|inputDate::content, 
+.pageInfoPanel af|panelFormLayout af|inputListOfValues::content, 
+.pageInfoPanel af|panelFormLayout af|inputFile::content, 
+.pageInfoPanel af|panelFormLayout af|selectBooleanCheckbox::content,
+.pageInfoPanel af|panelFormLayout af|selectOneRadio::content,
+.pageInfoPanel  .AFPanelFormLayoutContentCell {
+    color: #000 !important;
+}
+.pageInfoPanel  af|panelLabelAndMessage::content-cell.AFPanelFormLayoutContentCell {
+    color: #FFF !important;
+}
+
+.pageBasicDataPanel {
+    background-color: var(--secondary-color);
+}
+.pageBasicDataPanel label { 
+    color: var(--bs-light);
+}
+.pageBasicDataPanel af|panelHeader::title-text0 {
+    color: var(--dark-color) !important;
+}
+/* Panel Header Defualt Ico */
+.pageBasicDataPanel af|panelHeader::title-text0:before {
+    content: none !important;
+    color: var(--dark-color) !important;
+}
+/*Handle PanelFormLayout*/
+.pageBasicDataPanel af|panelFormLayout::label-cell,
+.pageBasicDataPanel af|panelFormLayout::label-stacked-cell {
+    color: var(--dark-color) !important;
+}
+.pageBasicDataPanel af|panelFormLayout af|selectOneChoice::content, 
+.pageBasicDataPanel af|panelFormLayout af|inputText::content, 
+.pageBasicDataPanel af|panelFormLayout af|inputFile::content, 
+.pageBasicDataPanel af|panelFormLayout af|inputDate::content, 
+.pageBasicDataPanel af|panelFormLayout af|inputListOfValues::content, 
+.pageBasicDataPanel af|panelFormLayout af|inputFile::content, 
+.pageBasicDataPanel af|panelFormLayout af|selectBooleanCheckbox::content,
+.pageBasicDataPanel af|panelFormLayout af|selectOneRadio::content,
+.pageBasicDataPanel  af|panelLabelAndMessage::content-cell.AFPanelFormLayoutContentCell,
+.pageBasicDataPanel  .AFPanelFormLayoutContentCell {
+    color: var(--primary-color) !important;
+}
+
+/***********************************************************************************************************************
+ *** ADF Faces *********************************************************************************************************
+ */
+ 
+/* Panel Form Components Styles */
+/*af|selectOneRadio*/
+af|inputText, 
+af|inputFile, 
+af|inputDate, 
+af|inputFile, 
+af|inputListOfValues, 
+af|selectOneChoice {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
+af|selectOneChoice::content, 
+af|inputText::content, 
+af|inputFile::content, 
+af|inputDate::content, 
+af|inputListOfValues::content {
+    background-color: #fff;
+}
+af|selectOneChoice::content, 
+af|inputText::content, 
+af|inputFile::content, 
+af|inputDate::content, 
+af|inputListOfValues::content, 
+af|inputFile::content {
+    min-width: 100% !important;
+    width: 100% !important;
+    height: 45px !important;
+    padding: 0.35rem 0.75rem !important;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem ;
+}
+
+/* Fix Some Component Issue */
+af|selectOneRadio::content {
+    /*min-width: 100% !important;*/
+    /*height: 45px !important;*/
+    /*padding-top: 8px;*/
+    /*font-size: 1rem !important;*/
+    /*font-weight: 400 !important;*/
+    display: flex;
+    align-items: center;
+    /*line-height: 3 !important;*/
+}
+
+/* DEFAULT disable fields style */
+af|inputText:disabled::content,
+af|selectOneChoice:disabled::content, 
+af|inputFile:disabled::content, 
+af|inputDate:disabled::content, 
+af|inputListOfValues:disabled::content {
+    background-color: #f6f6f6bf ;
+    border: 1px solid var(--border-light-color);
+    color: var(--disabled-color);
+    -webkit-text-fill-color: var(--disabled-color);
+}
+af|selectOneRadio:disabled::content {
+    color: var(--disabled-color);
+    -webkit-text-fill-color: var(--disabled-color);
+}
+
+af|selectOneRadio.cToggleRadio::content {
+    background-color: var(--panel-light-bg);
+    padding: 8px;
+    border-radius: 12px;
+}
+af|selectOneRadio.cToggleRadio::content-input {
+    /*background-color: var(--primary-color);
+    margin-right:10px;*/
+}
+af|selectOneRadio.cToggleRadio::native-input {
+    /*content: url("../resources/images/download.jpg");*/
+}
+/******************************************************************** SPECIAL CLASS ****
+ * Simple special classes for af|inputText
+ ****/
+af|inputText.inputComment::content {
+    height: 75px !important;
+}
+af|inputText.border-0::content {
+    border: none !important;
+}
+
+
+/*
+ * -----------------------------------------------------------------------[selectOneRadio]---[AFSelectionCard]--
+ * large radio buttons displays like cards with icon
+ */
+
+af|selectOneRadio.AFSelectionCard {
+    /*margin-top: 25px;*/
+    /*margin-bottom: 25px;*/
+}
+af|selectOneRadio.AFSelectionCard::label {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    padding-bottom: 15px;
+}
+af|selectOneRadio.AFSelectionCard::content {
+    display: flex;
+}
+af|selectOneRadio.AFSelectionCard::native-input {
+    display: none;
+    /*content: url("../resources/images/icons/square-regular.svg");*/
+    /*opacity: 0;*/
+    margin: 0px 0px 14px 0px;
+}
+/*af|selectOneRadio.AFSelectionCard.cardIco::native-input:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 700;
+    color: var(--secondary-color);
+    display: inline-grid;
+    font-size: 175%;
+    margin-bottom: 10px;
+}
+af|selectOneRadio.AFSelectionCard.cardIco::native-input:before {
+    content: "\f0c8";
+}*/
+af|selectOneRadio.AFSelectionCard::content-input {
+    position: relative !important;
+    background-color: var(--panel-light-bg);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px;
+    display: inline-grid;
+}
+af|selectOneRadio.AFSelectionCard::content-input:lang(en) {
+    margin-right: 10px;
+}
+af|selectOneRadio.AFSelectionCard::content-input:lang(ar) {
+    margin-left: 10px;
+}
+af|selectOneRadio.AFSelectionCard::item-text {
+    margin-left: 0px;
+    font-size: var(--font-size-lg);
+}
+af|selectOneRadio.AFSelectionCard::item-text::after {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+/******************************************************************** RADIO HOVER ****/
+af|selectOneRadio.AFSelectionCard::content-input:hover {
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease 0s;
+}
+af|selectOneRadio.AFSelectionCard::item-text:hover,
+af|selectOneRadio.AFSelectionCard.cardIco::content-input:hover:before,
+.AFSelectionCard.cardIco input[type="radio"]:hover + label:before,
+af|selectOneRadio.AFSelectionCard.cardIco::native-input:hover:before {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+/******************************************************************** CLASS **** Depend on .AFSelectionCard ****
+ * .cardIco
+ * stretch items to maximum
+ ****/
+.AFSelectionCard.cardIco input[type="radio"] + label {
+    display: inline-grid;
+}
+.AFSelectionCard.cardIco input[type="radio"] + label:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: 10px;
+    content: "\f0c8" !important;
+}
+.AFSelectionCard.cardIco.p_AFError input[type="radio"] + label:before {
+    color: var(--bs-danger)  !important;
+}
+.AFSelectionCard.cardIco input[type="radio"]:checked + label:before {
+    font-weight: 700;
+    content: "\f14a" !important;
+}
+/******************************************************************** CLASS **** Depend on .AFSelectionCard ****
+ * .AFRadioToggle
+ * cutomize radiobuttons group to be like toggle
+ ****/
+af|selectOneRadio.AFSelectionCard.AFRadioToggle,
+af|selectOneRadio.AFSelectionCard.AFRadioToggle fieldset {
+    width: 100%;
+    width: -webkit-fill-available;
+}
+af|selectOneRadio.AFSelectionCard.AFRadioToggle::content-input {
+    width: 50%;
+    border-radius: 0px;
+}
+af|selectOneRadio.AFSelectionCard.AFRadioToggle::content-input:lang(en) {
+    margin-right: 0px;
+}
+af|selectOneRadio.AFSelectionCard.AFRadioToggle::content-input:lang(ar) {
+    margin-left: 0px;
+}
+/******************************************************************** CLASS ****
+ * AFHideSelectionLegend
+ * Hide selectio group legend
+ ****/
+af|selectOneRadio.AFHideSelectionLegend legend {
+    display: none;
+}
+/******************************************************************** CLASS ****
+ * w100
+ * stretch items to maximum
+ ****/
+/*af|selectOneRadio.AFSelectionCard.w100,
+af|selectOneRadio.AFSelectionCard.w100::content-input {
+    width: 100%;
+}*/
+
+/*
+ * -----------------------------------------------------------------------[selectBooleanCheckbox]---[AFSelectionCard]--
+ * large check displays like cards with icon
+ */
+
+af|selectBooleanCheckbox.AFSelectionCard {
+    /*margin-top: 25px;*/
+    /*margin-bottom: 25px;*/
+}
+af|selectBooleanCheckbox.AFSelectionCard::label {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    padding-bottom: 15px;
+}
+af|selectBooleanCheckbox.AFSelectionCard::content {
+    display: flex;
+}
+af|selectBooleanCheckbox.AFSelectionCard::native-input {
+    display: none;
+    /*content: url("../resources/images/icons/square-regular.svg");*/
+    /*opacity: 0;*/
+    margin: 0px 0px 14px 0px;
+}
+/*af|selectBooleanCheckbox.AFSelectionCard.cardIco::native-input:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 700;
+    color: var(--secondary-color);
+    display: inline-grid;
+    font-size: 175%;
+    margin-bottom: 10px;
+}
+af|selectBooleanCheckbox.AFSelectionCard.cardIco::native-input:before {
+    content: "\f0c8";
+}*/
+af|selectBooleanCheckbox.AFSelectionCard::content-input {
+    position: relative !important;
+    background-color: var(--panel-light-bg);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px;
+    display: inline-grid;
+}
+af|selectBooleanCheckbox.AFSelectionCard::content-input:lang(en) {
+    margin-right: 10px;
+}
+af|selectBooleanCheckbox.AFSelectionCard::content-input:lang(ar) {
+    margin-left: 10px;
+}
+af|selectBooleanCheckbox.AFSelectionCard::item-text {
+    margin-left: 0px;
+    font-size: var(--font-size-lg);
+}
+af|selectBooleanCheckbox.AFSelectionCard::item-text::after {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+/******************************************************************** CHECKBOX UN/CHECKED with fontawesome ****/
+.AFSelectionCard .p_OraHiddenLabel {
+    position: relative;
+    top: 0;
+    margin-left: 0px;
+    font-size: var(--font-size-lg);
+}
+.AFSelectionCard input[type="checkbox"] + label {
+    display: inline-grid;
+}
+.AFSelectionCard input[type="checkbox"] + label:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: 10px;
+    content: "\f0c8" !important;
+}
+.AFSelectionCard input[type="checkbox"]:checked + label:before {
+    font-weight: 700;
+    content: "\f14a" !important;
+}
+/******************************************************************** CHECKBOX HOVER ****/
+af|selectBooleanCheckbox.AFSelectionCard::content-input:hover {
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease 0s;
+}
+.AFSelectionCard input[type="checkbox"]:hover + label,
+.AFSelectionCard input[type="checkbox"]:hover + label:before,
+af|selectBooleanCheckbox.AFSelectionCard::content-input:hover:before,
+af|selectBooleanCheckbox.AFSelectionCard::native-input:hover:before {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+/******************************************************************** CLASS ****
+ * w100
+ * stretch items to maximum
+ ****/
+af|selectBooleanCheckbox.AFSelectionCard.w100,
+af|selectBooleanCheckbox.AFSelectionCard.w100::content-input {
+    width: 100%;
+}
+
+
+/**
+ *
+ * ------------------------------------------------------------------[PanelFormLayout]---[DEFAULT]--
+ * ADF Faces > Layouts > PanelFormLayout
+ */
+af|panelFormLayout::column {
+}
+af|panelFormLayout::label-cell,
+af|panelFormLayout::label-stacked-cell {
+    text-align: start;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.AFPanelFormLayoutContentCell {
+}
+/* Panel Form Components Styles */
+/*af|panelFormLayout af|selectOneRadio*/
+af|panelFormLayout af|inputText, 
+af|panelFormLayout af|inputFile, 
+af|panelFormLayout af|inputDate, 
+af|panelFormLayout af|inputFile, 
+af|panelFormLayout af|inputListOfValues, 
+af|panelFormLayout af|selectOneChoice {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 5px; /*for stacked cell*/
+}
+af|panelFormLayout af|selectOneChoice::content, 
+af|panelFormLayout af|inputText::content, 
+af|panelFormLayout af|inputFile::content, 
+af|panelFormLayout af|inputDate::content, 
+af|panelFormLayout af|inputListOfValues::content {
+    background-color: #fff;
+}
+af|panelFormLayout af|selectOneChoice::content, 
+af|panelFormLayout af|inputText::content, 
+af|panelFormLayout af|inputFile::content, 
+af|panelFormLayout af|inputDate::content, 
+af|panelFormLayout af|inputListOfValues::content, 
+af|panelFormLayout af|inputFile::content {
+    min-width: 100% !important;
+    width: 100% !important;
+    height: 45px !important;
+    padding: 0.35rem 0.75rem !important;
+}
+af|panelFormLayout af|selectOneChoice::content, 
+af|panelFormLayout af|inputText::content, 
+af|panelFormLayout af|inputFile::content, 
+af|panelFormLayout af|inputDate::content, 
+af|panelFormLayout af|inputListOfValues::content, 
+af|panelFormLayout af|inputFile::content {
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem ;
+}
+
+/* Fix Some Component Issue */
+af|panelFormLayout af|selectOneRadio::content {
+    /*min-width: 100% !important;
+    height: 45px !important;*/
+    /*padding-top: 8px;*/
+    /*font-size: 1rem !important;*/
+    /*font-weight: 400 !important;*/
+    display: flex;
+    align-items: center;
+    /*line-height: 3 !important;*/
+}
+
+/* DEFAULT disable fields style */
+af|panelFormLayout af|inputText:disabled::content,
+af|panelFormLayout af|selectOneChoice:disabled::content, 
+af|panelFormLayout af|inputFile:disabled::content, 
+af|panelFormLayout af|inputDate:disabled::content, 
+af|panelFormLayout af|inputListOfValues:disabled::content {
+    background-color: #f6f6f6bf ;
+    border: 1px solid var(--border-light-color);
+    color: var(--disabled-color);
+    -webkit-text-fill-color: var(--disabled-color);
+}
+af|panelFormLayout af|selectOneRadio:disabled::content {
+    color: var(--disabled-color);
+    -webkit-text-fill-color: var(--disabled-color);
+}
+
+/**** CLASS ************************************
+ * adf-form-lg
+ */
+ 
+/*
+ * ------------------------------------------------------------------[panelFormLayout]---[AFFormReadonly]--
+ * special style for readonly
+ */
+af|panelFormLayout.AFFormReadonly {
+    /*padding-top: 10px;*/
+}
+af|panelFormLayout.AFFormReadonly::label-cell,
+af|panelFormLayout.AFFormReadonly::responsive-label-cell,
+af|panelFormLayout.AFFormReadonly::label-stacked-cell {
+    font-weight: normal;
+    padding: 0px;
+    padding-bottom: 4px;
+    font-size: var(--readonly-label-font-size);
+}
+af|panelFormLayout.AFFormReadonly af|inputText, 
+af|panelFormLayout.AFFormReadonly af|inputFile, 
+af|panelFormLayout.AFFormReadonly af|inputDate, 
+af|panelFormLayout.AFFormReadonly af|inputFile, 
+af|panelFormLayout.AFFormReadonly af|inputListOfValues, 
+af|panelFormLayout.AFFormReadonly af|selectOneChoice,
+af|panelFormLayout.AFFormReadonly af|selectOneRadio,
+af|panelFormLayout.AFFormReadonly af|panelLabelAndMessage {
+    margin-bottom: 1rem !important;
+}
+af|panelFormLayout.AFFormReadonly af|panelLabelAndMessage::content-cell.AFPanelFormLayoutContentCell,
+af|panelFormLayout.AFFormReadonly .AFPanelFormLayoutContentCell,
+af|panelFormLayout.AFFormReadonly af|panelLabelAndMessage af|link,
+af|panelFormLayout.AFFormReadonly af|selectOneChoice::content, 
+af|panelFormLayout.AFFormReadonly af|inputText::content, 
+af|panelFormLayout.AFFormReadonly af|inputFile::content, 
+af|panelFormLayout.AFFormReadonly af|inputDate::content, 
+af|panelFormLayout.AFFormReadonly af|inputListOfValues::content, 
+af|panelFormLayout.AFFormReadonly af|selectBooleanCheckbox::content,
+af|panelFormLayout.AFFormReadonly af|selectOneRadio::content {
+    display: flex;
+    justify-content: start;
+    height: auto !important;
+    font-size: var(--readonly-content-font-size) !important;
+    font-weight: bold !important;
+    padding: 0px !important;
+    overflow: hidden; /* Hide virtical scroll - no need */
+}
+
+
+
+
+/**
+ *
+ * ------------------------------------------------------------------[ListView]---[DEFAULT]--
+ * ADF Faces > Layouts > ListView
+ */
+af|listView {
+    border: none !important;
+}
+af|listView af|listItem:first-child {
+    /*border-top: none !important;*/
+}
+
+
+
+/**
+ *
+ * ------------------------------------------------------------------[PanelHeaderLayout]---[DEFAULT]--
+ * ADF Faces > Layouts > PanelHeaderLayout
+ */
+af|panelHeader::title1,
+af|panelHeader::title2 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: .5rem;
+}
+af|panelHeader::title0 {
+    margin-bottom: 1rem;    
+}
+af|panelHeader::title-text0 {
+    /*font-size: var(--title0-font-size);*/
+    font-size: var(--font-size-2x);
+    color: var(--primary-color) !important;
+    font-weight: 550;
+}
+af|panelHeader::title-text1 {
+    /*font-size: var(--title1-font-size);*/
+    font-size: var(--font-size-xl);
+    color: var(--primary-color) !important;
+    font-weight: 550;
+}
+af|panelHeader::title-text2 {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color) !important;
+    font-weight: 600;
+}
+/* Panel Header Defualt Ico */
+/*af|panelHeader::title-text0:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 700;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    color: var(--secondary-color);
+}
+af|panelHeader.noneIco::title-text0:lang(en):before {
+    content: "";
+}*/
+/*af|panelHeader::title-text0:lang(en):before {
+    content: "\2a";
+    margin-right: 10px;
+}
+af|panelHeader::title-text0:lang(ar):before {
+    content: "\2a";
+    margin-left: 10px;
+}*/
+
+/*
+ * ------------------------------------------------------------------[PanelHeaderLayout]---[AFPanelHeaderInlineTitle]--
+ * panel header with title placed in rounded border
+ */
+af|panelHeader.AFPanelHeaderInlineTitle {
+    border: 1px solid var(--border-light-color);
+    border-radius: 15px;
+    padding: 0 1rem 0.8rem;
+    margin-bottom: 1.5rem;
+}
+af|panelHeader.AFPanelHeaderInlineTitle::title0,
+af|panelHeader.AFPanelHeaderInlineTitle::title1,
+af|panelHeader.AFPanelHeaderInlineTitle::title2 {
+    position: absolute;
+    margin-top: -18px;
+}
+af|panelHeader.AFPanelHeaderInlineTitle::title-text0,
+af|panelHeader.AFPanelHeaderInlineTitle::title-text1,
+af|panelHeader.AFPanelHeaderInlineTitle::title-text2 {
+    background-color: #fff;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: var(--title2-font-size);
+}
+af|panelHeader.AFPanelHeaderInlineTitle::content0,
+af|panelHeader.AFPanelHeaderInlineTitle::content1,
+af|panelHeader.AFPanelHeaderInlineTitle::content2 {
+    padding-top: 20px;
+}
+/*
+ * ------------------------------------------------------------------[PanelHeaderLayout]---[AFPanelIcoFA]--
+ * FontAwesome icon for a PanelHeaderLayout
+ */
+af|panelHeader.AFPanelIcoFA::title-text0:before,
+af|panelHeader.AFPanelIcoFA::title-text1:before,
+af|panelHeader.AFPanelIcoFA::title-text2:before {
+    font-family: var(--font-awesome-family);
+    font-weight: var(--font-awesome-light);
+    display: inline-flex;
+    flex-wrap: nowrap;
+    color: var(--secondary-color);
+}
+af|panelHeader.AFPanelIcoFA::title-text0:lang(en):before,
+af|panelHeader.AFPanelIcoFA::title-text1:lang(en):before,
+af|panelHeader.AFPanelIcoFA::title-text2:lang(en):before {
+    margin-right: 10px;
+}
+af|panelHeader.AFPanelIcoFA::title-text0:lang(ar):before,
+af|panelHeader.AFPanelIcoFA::title-text1:lang(ar):before,
+af|panelHeader.AFPanelIcoFA::title-text2:lang(ar):before {
+    margin-left: 10px;
+}
+af|panelHeader.AFPanelIcoFA.testIco-0::title-text0:before,
+af|panelHeader.AFPanelIcoFA.testIco-1::title-text1:before,
+af|panelHeader.AFPanelIcoFA.testIco-2::title-text2:before {
+    content: "\f0c0";
+}
+af|panelHeader.testlock-0::title-text0:before,
+af|panelHeader.testlock-1::title-text1:before,
+af|panelHeader.testlock-2::title-text2:before {
+    content: "\f023";
+}
+af|panelHeader.one-0::title-text0:before,
+af|panelHeader.one-1::title-text1:before,
+af|panelHeader.one-2::title-text2:before {
+    content: "\31";
+}
+af|panelHeader.message-lines-0::title-text0:before,
+af|panelHeader.message-lines-1::title-text1:before,
+af|panelHeader.message-lines-2::title-text2:before {
+    content: "\f4a6";
+}
+af|panelHeader.hashtag-0::title-text0:before,
+af|panelHeader.hashtag-1::title-text1:before,
+af|panelHeader.hashtag-2::title-text2:before {
+    content: "\23";
+}
+af|panelHeader.paperclip-0::title-text0:before,
+af|panelHeader.paperclip-1::title-text1:before,
+af|panelHeader.paperclip-2::title-text2:before {
+    content: "\f0c6";
+}
+af|panelHeader.memo-0::title-text0:before,
+af|panelHeader.memo-1::title-text1:before,
+af|panelHeader.memo-2::title-text2:before {
+    content: "\e1d8";
+}
+af|panelHeader.cards-blank-0::title-text0:before,
+af|panelHeader.cards-blank-1::title-text1:before,
+af|panelHeader.cards-blank-2::title-text2:before {
+    content: "\e4df";
+}
+af|panelHeader.layer-group-0::title-text0:before,
+af|panelHeader.layer-group-1::title-text1:before,
+af|panelHeader.layer-group-2::title-text2:before {
+    content: "\f5fd";
+}
+af|panelHeader.message-check-0::title-text0:before,
+af|panelHeader.message-check-1::title-text1:before,
+af|panelHeader.message-check-2::title-text2:before {
+    content: "\f4a2";
+}
+af|panelHeader.rocket-launch-0::title-text0:before,
+af|panelHeader.rocket-launch-1::title-text1:before,
+af|panelHeader.rocket-launch-2::title-text2:before {
+    content: "\e027";
+}
+af|panelHeader.globe-0::title-text0:before,
+af|panelHeader.globe-1::title-text1:before,
+af|panelHeader.globe-2::title-text2:before {
+    content: "\f0ac";
+}
+af|panelHeader.flag-0::title-text0:before,
+af|panelHeader.flag-1::title-text1:before,
+af|panelHeader.flag-2::title-text2:before {
+    content: "\f024";
+}
+af|panelHeader.list-check-0::title-text0:before,
+af|panelHeader.list-check-1::title-text1:before,
+af|panelHeader.list-check-2::title-text2:before {
+    content: "\f0ae";
+}
+af|panelHeader.plug-0::title-text0:before,
+af|panelHeader.plug-1::title-text1:before,
+af|panelHeader.plug-2::title-text2:before {
+    content: "\f1e6";
+}
+af|panelHeader.circle-check-0::title-text0:before,
+af|panelHeader.circle-check-1::title-text1:before,
+af|panelHeader.circle-check-2::title-text2:before {
+    content: "\f058";
+}
+af|panelHeader.handshake-0::title-text0:before,
+af|panelHeader.handshake-1::title-text1:before,
+af|panelHeader.handshake-2::title-text2:before {
+    content: "\f2b5";
+}
+af|panelHeader.shapes-0::title-text0:before,
+af|panelHeader.shapes-1::title-text1:before,
+af|panelHeader.shapes-2::title-text2:before {
+    content: "\f61f";
+}
+af|panelHeader.map-location-dot-0::title-text0:before,
+af|panelHeader.map-location-dot-1::title-text1:before,
+af|panelHeader.map-location-dot-2::title-text2:before {
+    content: "\f5a0";
+}
+af|panelHeader.rectangle-vertical-history-0::title-text0:before,
+af|panelHeader.rectangle-vertical-history-1::title-text1:before,
+af|panelHeader.rectangle-vertical-history-2::title-text2:before {
+    content: "\e237";
+}
+af|panelHeader.grip-dots-0::title-text0:before,
+af|panelHeader.grip-dots-1::title-text1:before,
+af|panelHeader.grip-dots-2::title-text2:before {
+    content: "\e410";
+}
+af|panelHeader.cubes-stacked-0::title-text0:before,
+af|panelHeader.cubes-stacked-1::title-text1:before,
+af|panelHeader.cubes-stacked-2::title-text2:before {
+    content: "\e4e6";
+}
+af|panelHeader.scribble-0::title-text0:before,
+af|panelHeader.scribble-1::title-text1:before,
+af|panelHeader.scribble-2::title-text2:before {
+    content: "\e23f";
+}
+af|panelHeader.users-line-0::title-text0:before,
+af|panelHeader.users-line-1::title-text1:before,
+af|panelHeader.users-line-2::title-text2:before {
+    content: "\e592";
+}
+af|panelHeader.id-badge-0::title-text0:before,
+af|panelHeader.id-badge-1::title-text1:before,
+af|panelHeader.id-badge-2::title-text2:before {
+    content: "\f2c1";
+}
+af|panelHeader.user-0::title-text0:before,
+af|panelHeader.user-1::title-text1:before,
+af|panelHeader.user-2::title-text2:before {
+    content: "\f0c0";
+}
+af|panelHeader.medal-0::title-text0:before,
+af|panelHeader.medal-1::title-text1:before,
+af|panelHeader.medal-2::title-text2:before {
+    content: "\f5a2";
+}
+af|panelHeader.buildings-0::title-text0:before,
+af|panelHeader.buildings-1::title-text1:before,
+af|panelHeader.buildings-2::title-text2:before {
+    content: "\e0cc";
+}
+af|panelHeader.align-right-0::title-text0:before,
+af|panelHeader.align-right-1::title-text1:before,
+af|panelHeader.align-right-2::title-text2:before {
+    content: "\f038";
+}
+af|panelHeader.box-open-full-0::title-text0:before,
+af|panelHeader.box-open-full-1::title-text1:before,
+af|panelHeader.box-open-full-2::title-text2:before {
+    content: "\f49c";
+}
+af|panelHeader.paintbrush-pencil-0::title-text0:before,
+af|panelHeader.paintbrush-pencil-1::title-text1:before,
+af|panelHeader.paintbrush-pencil-2::title-text2:before {
+    content: "\e206";
+}
+af|panelHeader.list-timeline-0::title-text0:before,
+af|panelHeader.list-timeline-1::title-text1:before,
+af|panelHeader.list-timeline-2::title-text2:before {
+    content: "\e1d1";
+}
+af|panelHeader.graduation-cap-0::title-text0:before,
+af|panelHeader.graduation-cap-1::title-text1:before,
+af|panelHeader.graduation-cap-2::title-text2:before {
+    content: "\f19d";
+}
+af|panelHeader.circle-user-0::title-text0:before,
+af|panelHeader.circle-user-1::title-text1:before,
+af|panelHeader.circle-user-2::title-text2:before {
+    content: "\f2bd";
+}
+
+
+
+/***************************************************************
+ *** ADF Faces > Layouts > PanelTabbed
+ */
+af|panelTabbed::header,
+af|panelTabbed::header-center {
+    min-height: var(--tab-height) !important;
+    display: flex;
+    justify-content: center;
+}
+af|panelTabbed::tabs,
+af|panelTabbed::tab-content {
+    height: inherit;
+    border: none ;
+}
+af|panelTabbed::tab:lang(en) {
+    margin-right: 15px;
+}
+af|panelTabbed::tab:lang(ar) {
+    margin-left: 15px;
+}
+af|panelTabbed::tab:selected {
+    border: none;    
+    border-bottom: 3px solid var(--primary-color);
+    background-color: transparent !important;
+}
+af|panelTabbed::tab-content {
+    padding: 5px;
+    padding-bottom: 12px;
+    border-right: 1px solid transparent !important;
+    border-left: 1px solid transparent !important;
+}
+af|panelTabbed::tab af|panelTabbed::tab-text-link,
+af|panelTabbed::tab:selected af|panelTabbed::tab-text-link {
+    font-size: var(--title2-font-size);
+    padding: 0px;
+    outline: none;
+    text-decoration: none;
+    text-shadow: none;
+}
+af|panelTabbed::body {
+    margin-top: 50px;
+    border: none;
+    padding: 0px;
+    background-color: transparent !important;
+}
+
+/**** Query ****************************************************
+ *** ADF Faces > Query
+ */
+
+af|query {
+    border: 1px solid #d6dfe6;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: var(--mb-container);
+}
+af|query::title0 {
+    padding: 5px 0px;
+    /*margin-bottom: 5px;*/
+}
+af|query::title-text0 {
+    text-align: start;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 22px;
+    font-weight: 500;
+}
+af|query .x21 {/* Hide (match any/or) */
+    display: none;
+}
+af|query::criterion,
+af|query::criterion-content .x1a {
+    width: 100% !important;
+    min-width: 100% !important;
+}
+af|query::content0 {
+    border-top: 1px solid #dcdcdc;
+}
+af|query::content0,
+af|query::content-footer {
+    padding: 5px 5px;
+}
+af|query::content-footer {
+    padding-top: 10px;
+}
+af|query af|inputText, 
+af|query af|inputFile, 
+af|query af|inputDate, 
+af|query af|inputListOfValues, 
+af|query af|selectOneChoice {
+    width: 100% !important;
+    min-width: 100% !important;
+}
+af|query::criterion-label {
+    text-align: start;
+    font-weight: bold;
+    /*font-size: 13px !important;*/
+    /*padding-bottom: 0px;*/
+    /*padding-top: 15px;*/
+}
+af|query:lang(en)::criterion-label {
+    /*padding-left:15px;
+    padding-right:20px;*/
+}
+af|query:lang(ar)::criterion-label {
+    /*padding-left:20px;
+    padding-right:15px;*/
+}
+af|query af|selectOneChoice::content {
+    border-left: 1px solid #DFE4E7 !important;
+}
+af|query af|query::criterion-content af|inputText::content, 
+af|query af|selectOneChoice::content, 
+af|query af|inputFile::content, 
+af|query af|inputDate::content, 
+af|query af|inputListOfValues::content {
+    min-width: 100% !important;
+    width: 100% !important;
+    height: 45px !important;
+    padding: 0.35rem 0.75rem !important;
+}
+af|query af|query::criterion-content af|inputText::content, 
+af|query af|selectOneChoice::content, 
+af|query af|inputFile::content, 
+af|query af|inputDate::content, 
+af|query af|inputListOfValues::content {
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem ;
+}
+af|query af|selectBooleanCheckbox::content {
+    border: none !important;
+}
+/*af|query af|button {
+    line-height: 25px;
+}*/
+
+/***********************************************************************************************************************
+ *** ADF Components > Popups > Dialog
+ */
+af|dialog {
+    border-radius: 5px;
+    background-color: #fefefe;
+    border-collapse: unset;
+}
+af|dialog::title {
+    color: var(--primary-color);
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+af|dialog::header,
+af|dialog::header-end, 
+af|dialog::header-start 
+{
+    background: none !important;
+    /*height: 40px;*/
+    padding-top: 10px !important;
+    padding-left: 0px !important; 
+    padding-right: 0px !important;
+}
+af|dialog::header-end, 
+af|dialog::header-start {
+    width:10px
+}
+af|dialog::content, 
+af|dialog::content-start, 
+af|dialog::content-end {
+    border: none;
+}
+af|dialog::header:resizable, 
+af|dialog::header-end:resizable, 
+af|dialog::header-start:resizable {
+    background-image: none !important;
+    padding: 10px;
+}
+af|dialog af|button {
+    min-height: 30px;
+    height: 34px;
+    width: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-left:0px
+}
+af|dialog::icon-region {
+    width: auto;
+    height: auto;
+}
+af|dialog::resize-icon-style {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+
+/**** CLASS ************************************
+ * rounded-dialog
+ */
+af|dialog.rounded-dialog {
+    width: 50vw;
+    border-radius: var(--panels-border-raduis);
+}
+af|dialog.rounded-dialog .description {
+    width: 400px;
+}
+
+@media screen and (max-width: 992px), screen and (max-device-width: 992px) {
+    af|dialog::close-icon-style {
+        padding-right: 30px !important;
+    }
+    af|dialog.rounded-dialog {
+        width: 80vw;
+    }
+    af|dialog.rounded-dialog .description {
+        width: 325px;
+    }
+}
+
+af|dialog.info-dialog {
+    width: 75vw;
+}
+af|dialog.info-dialog::header,
+af|dialog.info-dialog::header-end, 
+af|dialog.info-dialog::header-start 
+{
+    padding-bottom: 10px !important;
+    border-bottom: 1px solid var(--border-light-color);
+}
+/**** Table ****************************************************
+ *** ADF Faces > Data Veiws > Table
+ */
+af|table {
+    border: none;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+    border-radius: 0.5rem !important;
+}
+af|table af|column::column-header-cell {
+    background-color: #fff;
+    height: 50px;
+    border: none;
+    border-bottom: 2px solid var(--primaryColor);
+}
+af|table af|column::column-header-cell:last-child {
+    border-right: none;
+}
+af|table af|column::column-header-cell-content {
+    font-size: 0.9rem;
+    text-align: start;
+}
+af|table af|column::data-cell, 
+af|table af|column::banded-data-cell {
+    height: 40px;
+    border-right: none;
+    border-left: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: start;
+}
+af|table af|column::data-cell af|selectOneChoice::content, 
+af|table af|column::data-cell af|inputText::content, 
+af|table af|column::data-cell af|inputFile::content, 
+af|table af|column::data-cell af|inputDate::content, 
+af|table af|column::data-cell af|inputListOfValues::content, 
+af|table af|column::data-cell af|selectBooleanCheckbox::content, 
+af|table af|column::banded-data-cell af|selectOneChoice::content, 
+af|table af|column::banded-data-cell af|inputText::content, 
+af|table af|column::banded-data-cell af|inputFile::content, 
+af|table af|column::banded-data-cell af|inputDate::content, 
+af|table af|column::banded-data-cell af|inputListOfValues::content, 
+af|table af|column::banded-data-cell af|selectBooleanCheckbox::content {
+    min-width: 100% !important;
+    height: calc(2.25rem+2px) !important;
+    padding: 0.375rem 0.75rem !important;
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #495057 !important;
+}
+af|table af|column::data-cell af|selectOneChoice::content:read-only, 
+af|table af|column::data-cell af|inputText::content:read-only, 
+af|table af|column::data-cell af|inputText::content:disabled, 
+af|table af|column::data-cell af|inputFile::content:read-only, 
+af|table af|column::data-cell af|inputDate::content:read-only, 
+af|table af|column::data-cell af|inputListOfValues::content:read-only, 
+af|table af|column::data-cell af|selectBooleanCheckbox::content:read-only, 
+af|table af|column::banded-data-cell af|selectOneChoice::content:read-only, 
+af|table af|column::banded-data-cell af|inputText::content:read-only, 
+af|table af|column::banded-data-cell af|inputText::content:disabled,
+af|table af|column::banded-data-cell af|inputFile::content:read-only, 
+af|table af|column::banded-data-cell af|inputDate::content:read-only, 
+af|table af|column::banded-data-cell af|inputListOfValues::content:read-only, 
+af|table af|column::banded-data-cell af|selectBooleanCheckbox::content:read-only {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    background-color: black !important;
+}
+/*af|table {
+    border: none;
+    border-radius: 7px;
+    background-color: transparent;
+    -webkit-box-shadow: var(--panel-shadow);
+    -o-box-shadow: var(--panel-shadow);
+    box-shadow: var(--panel-shadow);
+}
+af|table af|column::column-header-cell {
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid var(--border-light-color);
+}
+af|table af|column::column-header-cell,
+af|table af|column::column-header-table {
+    background-color: transparent;
+}
+af|table:lang(en) af|column::column-header-cell:last-child,
+af|table:lang(en) af|column::data-cell:last-child, 
+af|table:lang(en) af|column::banded-data-cell:last-child {
+    border-right: none;
+    border-left: none;
+}
+af|table:lang(ar) af|column::column-header-cell:last-child,
+af|table:lang(ar) af|column::data-cell:last-child, 
+af|table:lang(ar) af|column::banded-data-cell:last-child {
+    border-right: none;
+    border-left: none;
+}
+af|table af|column::column-header-cell-content {
+}
+af|table af|column::data-cell,
+af|table af|column::banded-data-cell {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 35px;
+}
+af|table af|column::banded-data-cell {
+}
+af|table af|column::data-cell af|selectOneChoice::content,
+af|table af|column::data-cell af|inputText::content,
+af|table af|column::data-cell af|inputFile::content,
+af|table af|column::data-cell af|inputDate::content,
+af|table af|column::data-cell af|inputListOfValues::content,
+af|table af|column::data-cell af|selectBooleanCheckbox::content,
+af|table af|column::data-cell af|outputText,
+af|table af|column::banded-data-cell af|selectOneChoice::content,
+af|table af|column::banded-data-cell af|inputText::content,
+af|table af|column::banded-data-cell af|inputFile::content,
+af|table af|column::banded-data-cell af|inputDate::content,
+af|table af|column::banded-data-cell af|inputListOfValues::content,
+af|table af|column::banded-data-cell af|selectBooleanCheckbox::content,
+af|table af|column::banded-data-cell af|outputText {
+}
+af|table af|column::data-cell af|button::link,
+af|table af|column::banded-data-cell af|button::link {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+} 
+af|table af|column::data-cell af|selectOneChoice:read-only::content, 
+af|table af|column::banded-data-cell af|selectOneChoice:read-only::content {
+}
+af|table af|column::data-cell af|selectOneChoice:read-only::content,
+af|table af|column::data-cell af|inputText:read-only::content,
+af|table af|column::data-cell af|inputText:disabled::content,
+af|table af|column::data-cell af|inputFile:read-only::content,
+af|table af|column::data-cell af|inputDate:read-only::content,
+af|table af|column::data-cell af|inputListOfValues:read-only::content,
+af|table af|column::data-cell af|selectBooleanCheckbox:read-only::content,
+af|table af|column::data-cell af|OutputText,
+af|table af|column::banded-data-cell af|selectOneChoice:read-only::content,
+af|table af|column::banded-data-cell af|inputText:read-only::content,
+af|table af|column::banded-data-cell af|inputText:disabled::content,
+af|table af|column::banded-data-cell af|inputFile:read-only::content,
+af|table af|column::banded-data-cell af|inputDate:read-only::content,
+af|table af|column::banded-data-cell af|inputListOfValues:read-only::content,
+af|table af|column::banded-data-cell af|selectBooleanCheckbox:read-only::content,
+af|table af|column::banded-data-cell af|OutputText {
+}*/
+/* Override Specific Class */
+/*af|table .x17h {
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 120%;
+    background-color: var(--panel-light-bg);
+    color: var(--primary-color);
+    margin-top: 20px;
+}*/
+
+ 
+/**** Buttons **************************************************
+ * ADF Faces > General Control > Button
+ */
+ 
+ /******************************************************************** Specific Classess] ****/
+
+.hideArrow af|menu::bar-item-open-icon-style {
+    display: none;
+}
+.hideText af|menu::bar-item-text,
+.hideText af|button::link,
+.hideText af|commandMenuItem::bar-item-text {
+    display: none;
+}   
+.hideMenuArrow af|menu::bar-item-open-icon-style {
+    display: none !important;
+}
+.hideMenuText af|menu::bar-item-text {
+    display: none !important;
+}
+ 
+.adf-menu-p-0 af|commandMenuItem::menu-item-text,
+.adf-menu-p-0 af|commandMenuItem::bar-item-text {
+    padding: 0px;
+}  
+/**
+ *
+ * ------------------------------------------------------------------[button]---[DEFAULT]--
+ * ADF Faces > General Control > Button
+ */
+ 
+.AFButtonBackground:alias {
+    background-color: var(--button-bg-color);
+}
+.AFButtonBorder:alias {
+    border: 1px solid var(--button-bg-color);
+}
+af|button {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 15px;
+    transition: all 0.2s ease-in;
+    border-radius: 10px;
+    cursor: pointer;
+    /* Override defualt style */
+    background-image: none !important;
+    text-decoration: none !important;
+    text-shadow: none !important;
+}
+/*af|button:lang(en) {
+    margin-left: 10px;
+}
+af|button:lang(ar) {
+    margin-right: 10px;
+}*/
+af|button::link {
+    /*padding: 0px 8px 0px 8px !important;*/
+    padding: 0 8px !important;
+}
+/*Handle FontAwesome Color*/
+af|button:before { 
+    color: var(--button-fw-icon-color); 
+}
+/******************************************************************** Button Hover */
+.AFButtonBackgroundHover:alias {
+    background-color: var(--button-hover-bg-color);
+    border: 1px solid var(--button-hover-bg-color);
+}
+af|button:hover,
+af|button::link:hover,
+.AFButtonBackgroundHover:alias {
+    color: #FFF;
+}
+af|button:active {
+    background-color: #FFF ; 
+}
+.AFButtonBackgroundActive:alias {
+    border: 1px solid var(--button-bg-color);
+    color: var(--button-bg-color);
+    background-color: #FFF ; 
+}
+af|button:active:before, 
+af|button::link:active {
+    color: var(--button-bg-color);
+}
+/******************************************************************** Button Disable */
+.AFButtonBackgroundDisabled:alias {
+    border: 1px solid var(--button-disable-bg-color);
+    background-color: var(--button-disable-bg-color); 
+}
+af|button:disabled::link,
+af|button:disabled {
+    color: var(--button-disable-text-color);
+    cursor: default;
+}
+
+/*
+ * ------------------------------------------------------------------[button]---[btn-clear]--
+ * Revert buttons defualt style
+ */
+af|button.btn-clear {
+    border: 1px solid var(--button-bg-color);
+    color: var(--button-bg-color);
+    background-color: #FFF;
+}
+
+af|button.btn-clear:before { 
+    color: var(--button-bg-color); 
+}
+/******************************************************************** Button Hover */
+af|button.btn-clear::link:hover,
+af|button.btn-clear:active:before,
+af|button.btn-clear:hover:before {
+    color: #FFF;
+}
+af|button.btn-clear:hover,
+.btn-clear .AFButtonBackgroundHover:alias {
+    background-color: var(--button-bg-color);
+    color: #FFF;
+}
+
+af|button.btn-block {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+}
+/**** CLASS ************************************
+ * Class: headerToolBarButton
+ */
+.headerToolbarButton af|button {
+    padding: 0px 15px;
+    min-width: 90px;
+    min-height: 45px;
+    font-size: 1rem !important;
+    /*font-weight: 500;*/
+}
+.headerToolbarButton af|button:before {
+    font-size: 1rem;
+}
+
+/**** CLASS ************************************
+ * Class: pageHeaderToolbarButton
+ */
+.pageHeaderToolbarButton af|button {
+    padding: 8px 15px;
+    /*min-width: 90px;*/
+    /*min-height: 45px;*/
+    font-size: 1.2rem !important;
+    /*font-weight: 500;*/
+}
+
+/**** CLASS ************************************
+ * Multi actions classes
+ */
+.btnPrimary {
+    background-color: var(--primary-color) !important;
+    border: 1px solid var(--primary-color) !important;
+}
+.btnSecondary {
+    background-color: var(--secondary-color) !important;
+    border: 1px solid var(--secondary-color) !important;
+}
+.btnSuccess {
+    background-color: var(--bs-success) !important;
+    border: 1px solid var(--bs-success) !important;
+}
+.btnWarning {
+    background-color: var(--warning-color) !important;
+    border: 1px solid var(--warning-color) !important;
+}
+.btn:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 700;
+}
+.btnSave {
+    background-color: var(--bs-primary) !important;
+    border: 1px solid var(--bs-info) !important;
+}
+.btnSave:before {
+    color: #FFF;
+    content: "\f058";
+}
+.btnCancel {
+    background-color: var(--warning-color) !important;
+    border: 1px solid var(--warning-color) !important;
+}
+.btnCancel:before {
+    content: "\f05e";
+    color: #FFF;
+}
+.btnAdd {
+    background-color: var(--bs-success) !important;
+    border: 1px solid var(--bs-success) !important;
+}
+.btnAdd:before {
+    content: "\2b";
+    color: #FFF;
+}
+.btnDel {
+    background-color: var(--bs-danger) !important;
+    border: 1px solid var(--bs-danger) !important;
+}
+.btnDel:before {
+    content: "\f2ed";
+    color: #FFF;
+}
+.btnIcoPrevious:lang(en):before {
+    content: "\f053";
+}
+.btnIcoPrevious:lang(ar):before {
+    content: "\f054";
+}
+.btnIcoNext:lang(en):before {
+    content: "\f054";
+}
+.btnIcoNext:lang(ar):before {
+    content: "\f053";
+}
+/**** Link *********************************************************************
+ * ADF Faces > General Control > link
+ */
+af|link {
+    /*display: flex;
+    align-items: center;*/
+}
+
+
+
+/**
+ *
+ * ------------------------------------------------------------------[selectManyShuttle]---[DEFAULT]--
+ * ADF Faces > Layouts > selectManyShuttle
+ */
+ 
+af|selectManyShuttle {
+}
+af|selectManyShuttle table { /* work-around for stretch component to fit panel */
+    width: 100%;
+    min-width: 100% !important;
+}
+af|selectManyShuttle::content {
+    background-color: #FFF !important;
+    border-radius: 0.5rem !important; 
+}
+af|selectManyShuttle::header {
+    /*text-align: center;*/
+    white-space: pre-wrap;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+af|selectManyShuttle::item {
+     background-color: transparent;
+     padding-right: 10px;
+     padding-left: 10px;
+}
+af|selectManyShuttle::icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-contents: center;
+    width: 25px !important;
+    min-width: 25px !important;
+}
+
+af|selectManyShuttle::move-horizontal,
+af|selectManyShuttle::moveall-horizontal,
+af|selectManyShuttle::remove-horizontal,
+af|selectManyShuttle::removeall-horizontal{
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important ;
+}
+
+/******************************************************************** CLASS ****
+ * .AFShuttleFree
+ * shuttle free borders and should be in CustomPanelHeader
+ ****/
+af|selectManyShuttle.AFShuttleFree div[role="toolbar"] { /* style moving shuttle icons panel */
+    background-color: var(--panel-light-bg);
+    border-radius: 10px;
+}
+af|selectManyShuttle.AFShuttleFree::content {
+    border: none !important ;
+}
+
+
+/**** Toolbar ************************************************************************************************
+ * ADF Faces > menus & toolbar > toolbar
+ */
+af|toolbar {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*background-color: var(--panel-light-bg);
+    border-radius: 10px;*/
+
+/**** Calendar ************************************************************************************************
+ * ADF Faces > Calendar
+ */
+af|calendar {
+}
+af|calendar af|toolbar {
+    padding: 5px 0px;
+    display: flex;
+    justify-content: between;
+}
+af|calendar af|toolbar af|button {
+    padding: 3px 8px 4px;
+    color: #fff;
+}
+af|calendar af|toolbar af|button:selected {
+    background-color: var(--primary-color);
+}
+af|calendar af|toolbar af|button:hover {
+    border-color: 1px solid var(--primary-color);
+    background-color: #fff;
+}
+af|calendar::all-day-activity-text {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+}
+af|calendar af|toolbar img {
+    padding: 0 !important;
+}
+af|calendar::all-day-activity-time {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    background-color: transparent;
+    display: none;
+}
+.not-assign-style {
+    border: 2px dashed #FFF;
+}
+
+/**** Menu ***************************************************************************************************
+ * ADF Faces > menus & toolbar > MenuBar, Menu & Menu Item
+ */
+ 
+af|menuBar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible !important;
+    background: transparent;
+}
+af|menu::bar-item,
+af|commandMenuItem::bar-item {
+    font-size: var(--menu-font-size);
+    color: #000 !important;
+    border: 1px solid #FFF;
+    border-radius: 5px !important ;
+    background-image: none;
+    transition: all 0.5s ease 0s;
+    margin: 0px 5px;
+    padding: 5px 8px !important ;
+}
+/* Menu Item Actions */
+af|menu::bar-item:hover,
+af|menu::bar-item:active,
+af|menu::bar-item:depressed,
+af|menu::bar-item:focus,
+af|commandMenuItem::bar-item:hover,
+af|commandMenuItem::bar-item:active,
+af|commandMenuItem::bar-item:depressed {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    background-image: none;
+    color: #000;
+}
+af|menu::bar-item:depressed * {
+    background-color: transparent !important;
+    color: #000 !important;
+}
+af|menu::bar-item-open-icon-style {
+    background-image: url("../resources/images/angle-down.svg");
+    height: 12px;
+    width: 12px;
+    /*padding-top: 2px;*/
+    background-position: center center;
+    background-color: var(--light-color);
+    border-radius: 25px;
+    padding: 10px 15px;
+    background-size: 10px;
+}
+af|menu:highlighted af|menu::bar-item-open-icon-style,
+af|menu:depressed af|menu::bar-item-open-icon-style {
+    background-image: url("../resources/images/angle-down.svg");
+    /*padding-top: 2px;*/
+}
+af|commandMenuItem::menu-item {
+    background-color: #fff;
+}
+af|commandMenuItem::menu-item-text {
+    padding: 10px 15px !important;
+    background-color: transparent !important;
+}
+af|commandMenuItem::menu-item-text:hover {
+    font-weight: 600;
+    cursor: pointer !important;
+}
+af|menu::submenu,af|menu::submenu-text {
+}
+af|menu::submenu-icon-style,
+af|menu::submenu-accelerator,
+af|commandMenuItem::menu-item-icon-style,
+af|commandMenuItem::menu-item-open-indicator,
+af|commandMenuItem::menu-item-accelerator{
+    display: none;
+}
+
+/***************************************************************
+ * Menu Item Icon 
+ */
+af|commandMenuItem.adf-fa-menu::menu-item-text:lang(ar):before {
+    margin-right: 0;
+    margin-left: 10px;
+}
+af|commandMenuItem.adf-fa-menu::menu-item-text:lang(en):before {
+    margin-right: 10px;
+    margin-left: 0px;
+}
+af|commandMenuItem.adf-fa-menu::menu-item-text:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 900;
+    color: var(--primary-color) !important;
+    content: "\f058";
+}
+af|commandMenuItem.fa-house::menu-item-text:before {
+    content: "\f015";
+}
+af|commandMenuItem.fa-id-card::menu-item-text:before {
+    content: "\f2c2";
+}
+af|commandMenuItem.fa-calendar-days::menu-item-text:before {
+    content: "\f073";
+}
+af|commandMenuItem.fa-circle-question::menu-item-text:before {
+    content: "\f059";
+}
+af|commandMenuItem.fa-user-plus::menu-item-text:before {
+    content: "\f234";
+}
+
+af|commandMenuItem.fa-calendar-days::menu-item-text:before {
+    content: "\f073";
+}
+
+af|commandMenuItem.fa-memo::menu-item-text:before {
+    content: "\e1d8";
+}
+
+af|commandMenuItem.fa-paste::menu-item-text:before {
+    content: "\f0ea";
+}
+
+
+/* Menu Items in Popup */
+.AFPopupMenuBorder {
+    border: 1px solid var(--primary-color) !important;
+}
+.AFPopupMenuPopup {
+    z-index: 100;
+    margin-top: 10px;
+}
+af|menu::child-container  {
+    /*color: #FFF;*/
+}
+.AFPopupMenuPopup, .AFPopupMenuContent, .AFPopupMenuBorder, 
+af|menu::child-container,
+af|commandMenuItem::menu-item-text {
+    border-radius: 10px;
+}
+af|menu::scroll-content {
+    width: 300px;
+    background-color: transparent !important;
+    border: none;
+}
+af|menu::scroll-box {
+    width: 100%;
+}
+
+/**** CLASS ************************************
+ * Hide menu down arrow
+ */
+.hideMenuArrow af|menu::bar-item-open-icon-style {
+    display: none !important;
+}
+/**** CLASS ************************************
+ * Hide menu text
+ */
+.hideMenuText af|menu::bar-item-text {
+    display: none !important;
+}
+
+/**** CLASS ************************************
+ * Hide menu text
+ */
+af|menu::bar-item:hover.hoverLight,
+af|menu::bar-item:active.hoverLight,
+af|menu::bar-item:depressed.hoverLight,
+af|menu::bar-item:focus.hoverLight {
+    background-color: var(--light-color) !important;
+    border: 1px solid var(--light-color) !important;
+    color: var(-primaryColor) !important;
+}
+
+
+/************************************************************************************************************
+ *** FontAwesome 6 pro
+ */
+.adf-fa:before, 
+.adf-fa:after {
+    font-family: var(--font-awesome-family);
+}
+.adf-fas:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 900;
+}
+.adf-far:before, 
+.adf-far:after {
+    font-family: var(--font-awesome-family);
+    font-weight: 400;
+}
+.adf-fal:before, 
+.adf-fal:after {
+    font-family: var(--font-awesome-family);
+    font-weight: 300;
+}
+.adf-fad:before, 
+.adf-fad:after {
+    position: relative;
+    font-family: 'Font Awesome 6 Duotone';
+    font-weight: 900;
+    letter-spacing: normal;
+}
+
+/* For any component has FW icon */
+.adf-fa-comp {
+    display: flex;
+    align-items: center;
+}
+.adf-fa-comp:lang(en):before,
+.adf-fa-m:lang(en):before {
+    margin-right: 5px;
+    margin-left: 0px;
+}
+.adf-fa-comp:lang(ar):before,
+.adf-fa-m:lang(ar):before {
+    margin-right: 0;
+    margin-left: 5px;
+}
+
+.adf-fa-secondary:before { 
+    color: var(--secondary-color); 
+}
+
+/*
+ *
+ * ------------------------------------------------------------------[selectOneRadio]---[radioButtonCard]--
+ * large radio buttons displays like cards with icon
+ * default skin and hover event style
+ * Dependencies [fontawesome6]
+ */
+
+af|selectOneRadio.radioButtonCard {
+    /*margin-top: 25px;*/
+    /*margin-bottom: 25px;*/
+}
+af|selectOneRadio.radioButtonCard::label {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    padding-bottom: 15px;
+}
+af|selectOneRadio.radioButtonCard::content {
+    display: flex;
+}
+af|selectOneRadio.radioButtonCard::native-input {
+    display: none;
+    /*content: url("../resources/images/icons/square-regular.svg");*/
+    /*opacity: 0;*/
+    margin: 0px 0px 14px 0px;
+}
+af|selectOneRadio.radioButtonCard::content-input {
+    position: relative !important;
+    background-color: var(--panel-light-bg);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px;
+    display: inline-grid;
+}
+af|selectOneRadio.radioButtonCard::content-input:lang(en) {
+    margin-right: 10px;
+}
+af|selectOneRadio.radioButtonCard::content-input:lang(ar) {
+    margin-left: 10px;
+}
+af|selectOneRadio.radioButtonCard::item-text {
+    margin-left: 0px;
+    font-size: var(--font-size-lg);
+}
+af|selectOneRadio.radioButtonCard::item-text::after {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+/** RADIO HOVER **/
+af|selectOneRadio.radioButtonCard::content-input:hover {
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease 0s;
+}
+af|selectOneRadio.radioButtonCard::item-text:hover,
+af|selectOneRadio.radioButtonCard.cardIco::content-input:hover:before,
+.radioButtonCard.cardIco input[type="radio"]:hover + label:before,
+af|selectOneRadio.radioButtonCard.cardIco::native-input:hover:before {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+
+
+/*
+ * -----------------------------------------------------------------------[selectOneRadio]---[AFSelectionCard]--
+ * large radio buttons displays like cards with icon
+ */
+
+af|selectOneRadio.AFSelectionCard {
+    /*margin-top: 25px;*/
+    /*margin-bottom: 25px;*/
+}
+af|selectOneRadio.AFSelectionCard::label {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    padding-bottom: 15px;
+}
+af|selectOneRadio.AFSelectionCard::content {
+    display: flex;
+}
+af|selectOneRadio.AFSelectionCard::native-input {
+    display: none;
+    /*content: url("../resources/images/icons/square-regular.svg");*/
+    /*opacity: 0;*/
+    margin: 0px 0px 14px 0px;
+}
+af|selectOneRadio.AFSelectionCard::content-input {
+    position: relative !important;
+    background-color: var(--panel-light-bg);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px;
+    display: inline-grid;
+}
+af|selectOneRadio.AFSelectionCard::content-input:lang(en) {
+    margin-right: 10px;
+}
+af|selectOneRadio.AFSelectionCard::content-input:lang(ar) {
+    margin-left: 10px;
+}
+af|selectOneRadio.AFSelectionCard::item-text {
+    margin-left: 0px;
+    font-size: var(--font-size-lg);
+}
+af|selectOneRadio.AFSelectionCard::item-text::after {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+/******************************************************************** RADIO HOVER ****/
+af|selectOneRadio.AFSelectionCard::content-input:hover {
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease 0s;
+}
+af|selectOneRadio.AFSelectionCard::item-text:hover,
+af|selectOneRadio.AFSelectionCard.cardIco::content-input:hover:before,
+.AFSelectionCard.cardIco input[type="radio"]:hover + label:before,
+af|selectOneRadio.AFSelectionCard.cardIco::native-input:hover:before {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+/******************************************************************** CLASS **** Depend on .AFSelectionCard ****
+ * .cardIco
+ * stretch items to maximum
+ ****/
+.AFSelectionCard.cardIco input[type="radio"] + label {
+    display: inline-grid;
+}
+.AFSelectionCard.cardIco input[type="radio"] + label:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: 10px;
+    content: "\f0c8" !important;
+}
+.AFSelectionCard.cardIco.p_AFError input[type="radio"] + label:before {
+    color: var(--bs-danger)  !important;
+}
+.AFSelectionCard.cardIco input[type="radio"]:checked + label:before {
+    font-weight: 700;
+    content: "\f14a" !important;
+}
+/******************************************************************** CLASS **** Depend on .AFSelectionCard ****
+ * .AFRadioToggle
+ * cutomize radiobuttons group to be like toggle
+ ****/
+af|selectOneRadio.AFSelectionCard.AFRadioToggle,
+af|selectOneRadio.AFSelectionCard.AFRadioToggle fieldset {
+    width: 100%;
+    width: -webkit-fill-available;
+}
+af|selectOneRadio.AFSelectionCard.AFRadioToggle::content-input {
+    width: 50%;
+    border-radius: 0px;
+}
+af|selectOneRadio.AFSelectionCard.AFRadioToggle::content-input:lang(en) {
+    margin-right: 0px;
+}
+af|selectOneRadio.AFSelectionCard.AFRadioToggle::content-input:lang(ar) {
+    margin-left: 0px;
+}
+/******************************************************************** CLASS ****
+ * AFHideSelectionLegend
+ * Hide selectio group legend
+ ****/
+af|selectOneRadio.AFHideSelectionLegend legend {
+    display: none;
+}
+/******************************************************************** CLASS ****
+ * w100
+ * stretch items to maximum
+ ****/
+/*af|selectOneRadio.AFSelectionCard.w100,
+af|selectOneRadio.AFSelectionCard.w100::content-input {
+    width: 100%;
+}*/
+
+/*
+ * -----------------------------------------------------------------------[Custom]---[adf-card]--
+ * Pure Bootstrap Card
+ */
+.adf-card .card-title {
+    font-size: var(--fs-lg);
+}
+
+/*
+ * -----------------------------------------------------------------------[selectBooleanCheckbox]---[AFSelectionCard]--
+ * large check displays like cards with icon
+ */
+
+af|selectBooleanCheckbox.AFSelectionCard {
+    /*margin-top: 25px;*/
+    /*margin-bottom: 25px;*/
+}
+af|selectBooleanCheckbox.AFSelectionCard::label {
+    font-size: var(--font-size-lg);
+    color: var(--primary-color);
+    padding-bottom: 15px;
+}
+af|selectBooleanCheckbox.AFSelectionCard::content {
+    display: flex;
+}
+af|selectBooleanCheckbox.AFSelectionCard::native-input {
+    display: none;
+    /*content: url("../resources/images/icons/square-regular.svg");*/
+    /*opacity: 0;*/
+    margin: 0px 0px 14px 0px;
+}
+/*af|selectBooleanCheckbox.AFSelectionCard.cardIco::native-input:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 700;
+    color: var(--secondary-color);
+    display: inline-grid;
+    font-size: 175%;
+    margin-bottom: 10px;
+}
+af|selectBooleanCheckbox.AFSelectionCard.cardIco::native-input:before {
+    content: "\f0c8";
+}*/
+af|selectBooleanCheckbox.AFSelectionCard::content-input {
+    position: relative !important;
+    background-color: var(--panel-light-bg);
+    border-radius: var(--panels-border-raduis);
+    padding: 20px;
+    display: inline-grid;
+}
+af|selectBooleanCheckbox.AFSelectionCard::content-input:lang(en) {
+    margin-right: 10px;
+}
+af|selectBooleanCheckbox.AFSelectionCard::content-input:lang(ar) {
+    margin-left: 10px;
+}
+af|selectBooleanCheckbox.AFSelectionCard::item-text {
+    margin-left: 0px;
+    font-size: var(--font-size-lg);
+}
+af|selectBooleanCheckbox.AFSelectionCard::item-text::after {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+/******************************************************************** CHECKBOX UN/CHECKED with fontawesome ****/
+.AFSelectionCard .p_OraHiddenLabel {
+    position: relative;
+    top: 0;
+    margin-left: 0px;
+    font-size: var(--font-size-lg);
+}
+.AFSelectionCard input[type="checkbox"] + label {
+    display: inline-grid;
+}
+.AFSelectionCard input[type="checkbox"] + label:before {
+    font-family: var(--font-awesome-family);
+    font-weight: 400;
+    color: var(--secondary-color);
+    font-size: var(--font-size-lg);
+    margin-bottom: 10px;
+    content: "\f0c8" !important;
+}
+.AFSelectionCard input[type="checkbox"]:checked + label:before {
+    font-weight: 700;
+    content: "\f14a" !important;
+}
+/******************************************************************** CHECKBOX HOVER ****/
+af|selectBooleanCheckbox.AFSelectionCard::content-input:hover {
+    background-color: var(--secondary-color);
+    transition: all 0.5s ease 0s;
+}
+.AFSelectionCard input[type="checkbox"]:hover + label,
+.AFSelectionCard input[type="checkbox"]:hover + label:before,
+af|selectBooleanCheckbox.AFSelectionCard::content-input:hover:before,
+af|selectBooleanCheckbox.AFSelectionCard::native-input:hover:before {
+    transition: all 0.3s ease 0s;
+    color: #fff;
+}
+/******************************************************************** CLASS ****
+ * w100
+ * stretch items to maximum
+ ****/
+af|selectBooleanCheckbox.AFSelectionCard.w100,
+af|selectBooleanCheckbox.AFSelectionCard.w100::content-input {
+    width: 100%;
+}
+
+
+
+
+/***********************************************************************************************************************
+ *** Custom Components [Screens] Classes *******************************************************************************
+ */
+
+.summaryCard {
+    background-color: #FFFFFF;
+    /*-webkit-box-shadow: var(--panel-shadow);
+    -o-box-shadow: var(--panel-shadow);
+    box-shadow: var(--panel-shadow);*/
+    width: fit-content;
+    border: 2px solid #DEE2E6;
+    border-radius: 7px;
+    padding: 15px;
+    padding-bottom:15px;
+    margin-bottom: var(--margin-bottom-var);
+}
+.summaryCard .summaryCardLabel {
+    font-weight: bold;
+    font-size: var(--fs-lg);
+}
+.summaryCard .summaryCardValue {
+    color: #6c757d;
+}
+
+/************************************************************************************************************
+ * Root
+ */
+:root {
+    /* Vendors Setup */
+    --font-awesome-family: "Font Awesome 6 Pro";
+    --font-awesome-light: 300;
+    --font-awesome-regualr: 400;
+    /* Colors */
+    --bg-color: #fff;/*#fbf9fa;*/
+    --primary-color: #AA1F2E;
+    --secondary-color: #A29366;/*#a19666;*/
+    --stone-gray-color: #939598;
+    --light-color: #939598;
+    --dark-color: #33323a;
+    --warning-color: #dbab1b;
+    --bg-red: #9f233d;
+    --footer-bg: #333333;
+    --disabled-color: #fbfbfb;
+    /* Spaces */
+    --mb-container: 1.5rem;
+    --mb-panels: 24px;
+    --px-bar: 1.2rem;
+    /* Fonts */
+    --application-font-size: 1rem;
+    --font-size-sm: 60%;
+    --font-size-md: 80%;
+    --font-size-lg: 120%;
+    --font-size-xl: 140%;
+    --font-size-2x: 160%;
+    --font-size-3x: 180%;
+    --menu-font-size: 1.1rem;
+    --readonly-label-font-size: 85%;
+    --readonly-content-font-size: 115%;
+    --title0-font-size: 1.8rem;
+    --title1-font-size: 1.5rem;
+    --title2-font-size: 1.3rem;
+    /* Modules & Components Setups */
+    --tab-height: 52px;
+    --main-header-user-height: 35px;
+    /* Buttons */
+    --button-bg-color: var(--primary-color);
+    --button-hover-bgColor: var(--secondary-color);
+    /* Panels */
+    --panels-border-raduis: 15px;
+    --panel-light-bg: #F6F7F9;
+    --border-light-color: #edeef1;/*#DEE2E6;*/
+    --panel-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    --login-fields-radius: 50px;
+    --login-button-radius: var(--login-fields-radius);
+    
+    /*--*//*fa-primary-color: var(--primary-color);*/
+    --fa-secondary-color: var(--secondary-color);
+}
+
+
+
+
+
+.profile-img {
+    background-image: url("../resources/images/download.jpg");
+    height: 75px;
+    width: 75px;
+    border-radius: 100%;
+    background-size: cover;
+    border: 2px solid var(--primary-color);
+}
+
+
+.bg-navy {
+     background-color: rgb(36,52,83,.75)!important;
+}
+.bg-gray {
+    background-color: rgb(108,117,125,.75)!important;
+}
+.bg-green {
+    background-color: rgb(10,61,47,.75) !important;
+}
+
+
+
+af|listView.listViewExpand {
+    border: none;
+}
+
+.listViewExpand af|listItem {
+    padding: 0px;
+    border: none;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+.listViewExpand af|listItem:selected {
+    background-color: #fafafa ;
+}
+.listViewExpand .panelcontainer {
+    border: 1px solid #d6dfe6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+/*
+ *
+ * ------------------------------------------------------------------[Custom]---[selectManySearchableBox]--
+ * Multi selections with search 
+ * Dependencies [fontawesome6] [bootstrap5.1]
+ */
+
+.selectManySearchableBox .selection-items-panel {
+    background-color: var(--panel-light-bg);
+    border: 1px solid var(--border-light-color);
+    border-radius: 10px;
+    padding: 12px 12px 12px;
+}
+.selectManySearchableBox .selection-items-panel af|link.showMore {
+    background-color: var(--bs-light);
+    color: #000;
+    border-radius: 7px;
+    padding: 0px 10px;;
+}
+.selectManySearchableBox .selection-items-panel af|link:hover {
+    background-color: #e6e7e9;
+}
+
+.selectManySearchableBox .list-panel {
+    border: 1px solid var(--border-light-color);
+    border-radius: 10px;
+    padding: 12px 12px;
+}
+.selectManySearchableBox .list-panel table {
+    min-width: 100% !important;
+    width: 100% !important; 
+}
+.selectManySearchableBox .list-panel af|selectManyListbox::content {
+    background-color: transparent;
+    border: none;
+}
+.selectManySearchableBox .list-panel af|selectManyListbox::item {
+    background-color: transparent;
+    margin-bottom: 5px;
+}
+.selectManySearchableBox .list-panel af|inputText::content {
+    height: 35px !important;
+    margin-bottom: 10px;
+    font-size: 90%;
+}
+
+
+
+
+.card-title {
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+}
+.card-desc {
+    padding-bottom: 10px;
+}
+.card-desc .feature {
+    color:#6c757d!important
+}
+.card-desc .feature:before {
+    content: "\f058";
+}
+.card-desc .error {
+    color: #dc3545 !important;
+}
+.card-desc .error:before {
+    content: "\f06a";
+}
+.card-desc .memo:before {
+    content: "\e1d9";
+}
+
+.bootstrap-color {
+    color: #7952B3;
+}
+.bg-bootstrap-color {
+    background-color: #7952B3;
+}
+.fa-color {
+    color: #538DD7;
+}
+
+
+.card-title .comp-badge {
+    padding: 3px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 0.5rem;
+}

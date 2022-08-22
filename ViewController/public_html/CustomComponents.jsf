@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+        xmlns:h="http://java.sun.com/jsf/html" xmlns:skh="https://skhcodebook.com/snippetdetails/8mVsoSeHprPDLTxtiObH">
+    <?audit suppress oracle.jdeveloper.jsp.unnecessary-component-group?>
+    <af:document title="SKH Custom Comp." id="d1">
+        <af:resource type="css" source="/resources/vendors/bootstrap-5.0.2/css/bootstrap.min.css"/>
+        <af:resource type="css" source="/resources/vendors/fontawesome6pro/css/all.min.css"/>
+        <af:form id="f1">
+            <h:panelGroup id="pgl5" layout="block" styleClass="container-fluid p-4">
+                <h:panelGroup id="pg1" layout="block" styleClass="row">
+                    <h:panelGroup id="pg2" layout="block" styleClass="col-12 d-flex justify-content-between text-start mb-4">
+                        <h:panelGroup id="pg6" layout="block" styleClass="d-grid">
+                            <af:outputText id="ot9" value="SKH Custom Components" styleClass="fs-3x"/>
+                            <af:outputText id="ot4" value="Oracle ADF" styleClass="text-muted fs-lg"/>
+                        </h:panelGroup>
+                        <af:link id="l1" text="Documentations"
+                                 destination="https://skhcodebook.com/d/8mVsoSeHprPDLTxtiObH"
+                                 styleClass="text-muted adf-far adf-fa-m fa-link"/>
+                    </h:panelGroup>
+                </h:panelGroup>
+                <h:panelGroup id="pg4" layout="block" styleClass="row" style="row-gap: 1.5rem;">
+                    <!--Panel Header Inline Title-->
+                    <h:panelGroup id="pg3" layout="block" styleClass="col-lg-6 col-xl-4">
+                        <af:panelGroupLayout id="pgl15" layout="vertical" styleClass="border rounded shadow-sm p-4">
+                            <!--Title & Techs-->
+                            <af:panelGroupLayout id="pgl18" layout="vertical" styleClass="card-title">
+                                <af:outputText id="ot18" value="Panel Header with Inline Title"/>
+                                <h:panelGroup id="pg13" layout="block" styleClass="d-flex align-items-center gap-2 mt-2 mb-2">
+                                    <af:outputText id="ot32" value="af|panelHeader" styleClass="comp-badge bg-danger text-white"/>
+                                    <af:icon id="i5" styleClass="fa-brands fa-bootstrap bootstrap-color fa-sm"
+                                             shortDesc="Bootstrap"/>
+                                </h:panelGroup>
+                            </af:panelGroupLayout>
+                            <!--Description-->
+                            <af:panelGroupLayout id="pgl20" layout="vertical" styleClass="card-desc mb-3">
+                                <af:outputFormatted id="ot16"
+                                               value="Property &lt;strong>fwClass&lt;/strong> must have special css class predefined in skin file"
+                                               styleClass="adf-far adf-fa-m feature memo"/>
+                            
+                            </af:panelGroupLayout>
+                            <skh:panelHeaderInlineTitle title="Panel Title" id="phit1" fwClass="rocket-launch-0">
+                                <f:facet name="body">
+                                    <af:panelGroupLayout id="pgl34" layout="vertical" halign="center"
+                                                         styleClass="bg-light rounded py-3">
+                                        <af:outputText id="ot14" value="No Data to Display" styleClass="fw-bold"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                                <f:facet name="toolbar"/>
+                            </skh:panelHeaderInlineTitle>
+                        </af:panelGroupLayout>
+                    </h:panelGroup>
+                    <!--Panel Header Responsive-->
+                    <h:panelGroup id="pg10" layout="block" styleClass="col-lg-6 col-xl-4">
+                        <af:panelGroupLayout id="pgl27" layout="vertical" styleClass="border rounded shadow-sm p-4">
+                            <!--Title & Techs-->
+                            <af:panelGroupLayout id="pgl29" layout="vertical" styleClass="card-title">
+                                <af:outputText id="ot11" value="Panel Header Responsive"/>
+                                <h:panelGroup id="pg11" layout="block" styleClass="d-flex align-items-center gap-2 mt-2 mb-2">
+                                    <af:outputText id="ot31" value="custom" styleClass="comp-badge bg-warning text-dark"/>
+                                    <af:icon id="i9" styleClass="fa-brands fa-bootstrap bootstrap-color fa-sm"
+                                             shortDesc="Bootstrap"/>
+                                </h:panelGroup>
+                            </af:panelGroupLayout>
+                            <!--Description-->
+                            <af:panelGroupLayout id="pgl31" layout="vertical" styleClass="card-desc">
+                                <af:outputText id="ot27" value="Custom component simulate af|panelHeader but responsive"
+                                               styleClass="adf-far adf-fa-m feature"/>
+                            </af:panelGroupLayout>
+                            <!--Figures-->
+                            <af:panelGroupLayout id="pgl21" layout="vertical" styleClass="card-figures">
+                                <af:outputText id="ot19" value="Mobile View"/>
+                                <af:image id="i2" source="/resources/images/panelheader-responsive-mobile.png"
+                                          shortDesc="ListView Expand Figure" styleClass="img-fluid"/>
+                            </af:panelGroupLayout>
+                            <skh:panelHeaderBsResponsive id="phbr1" title="Panel Title">
+                                <f:facet name="body">
+                                    <af:panelGroupLayout id="pgl28" layout="vertical" halign="center"
+                                                         styleClass="bg-light rounded py-3">
+                                        <af:outputText id="ot28" value="No Data to Display" styleClass="fw-bold"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                                <f:facet name="toolbar">
+                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b1"/>
+                                    <af:button actionListener="#{bindings.Rollback.execute}" text=""
+                                               styleClass="adf-far fa-rotate-left text-white hideText" immediate="true"
+                                               id="b2">
+                                        <af:resetActionListener/>
+                                    </af:button>
+                                </f:facet>
+                            </skh:panelHeaderBsResponsive>
+                        </af:panelGroupLayout>
+                    </h:panelGroup>
+                    <!--Summary Card-->
+                    <h:panelGroup id="pg7" layout="block" styleClass="col-lg-6 col-xl-4">
+                        <af:panelGroupLayout id="pgl17" layout="vertical" styleClass="border rounded shadow-sm p-4">
+                            <!--Title & Techs-->
+                            <af:panelGroupLayout id="pgl32" layout="vertical" styleClass="card-title">
+                                <af:outputText id="ot12" value="Summary Card"/>
+                                <h:panelGroup id="pg12" layout="block" styleClass="d-flex align-items-center gap-2 mt-2 mb-2">
+                                    <af:outputText id="ot33" value="custom" styleClass="comp-badge bg-warning text-dark"/>
+                                    <af:icon id="i10" styleClass="fa-brands fa-bootstrap bootstrap-color fa-sm"
+                                             shortDesc="Bootstrap"/>
+                                    <af:icon id="i6" styleClass="fa-brands fa-font-awesome fa-color fa-sm"
+                                             shortDesc="Font Awesome"/>
+                                </h:panelGroup>
+                            </af:panelGroupLayout>
+                            <!--Description-->
+                            <af:panelGroupLayout id="pgl35" layout="vertical" styleClass="card-desc">
+                            </af:panelGroupLayout>
+                            <h:panelGroup id="pg8" layout="block" styleClass="d-flex  gap-2">
+                                <!--<skh:summaryCard title="Users" id="sc1" value="342"
+                                                 faClass="fa-regular fa-users fa-2x" />-->
+                                <skh:summaryCard title="Ads Inc." id="sc2" value="1023.43 EGP"
+                                                 faClass="fa-regular fa-money-from-bracket fa-2x"
+                                                  customClass="w-100"/>
+                                <skh:summaryCard title="EGP Rate" id="sc3" value="19.43 USD"
+                                                 faClass="fa-regular fa-chart-line-up fa-2x"
+                                                  customClass="w-100"/>
+                            </h:panelGroup>
+                        </af:panelGroupLayout>
+                    </h:panelGroup>
+                    <!--Bootstrap Card-->
+                    <h:panelGroup id="pg9" layout="block" styleClass="col-lg-6 col-xl-4">
+                        <af:panelGroupLayout id="pgl22" layout="vertical" styleClass="border rounded shadow-sm p-4">
+                            <!--Title & Techs-->
+                            <af:panelGroupLayout id="pgl24" layout="vertical" styleClass="card-title">
+                                <af:outputText id="ot26" value="Bootstrap Card"/>
+                                <h:panelGroup id="pg14" layout="block" styleClass="d-flex align-items-center gap-2 mt-2 mb-2">
+                                    <af:outputText id="ot34" value="bootstrap" styleClass="comp-badge bg-bootstrap-color text-white"/>
+                                    <af:icon id="i8" styleClass="fa-brands fa-bootstrap bootstrap-color fa-sm"
+                                             shortDesc="Bootstrap"/>
+                                </h:panelGroup>
+                            </af:panelGroupLayout>
+                            <!--Description-->
+                            <af:panelGroupLayout id="pgl26" layout="vertical" styleClass="card-desc">
+                                <af:outputText id="ot29" value="This pure bootstrap card"
+                                               styleClass="adf-far adf-fa-m feature"/>
+                            </af:panelGroupLayout>
+                            <!--Component-->
+                            <skh:card id="c1" cardTitle="British birds"
+                                      cardSubTitle="19 common British birds you can find in your garden"  
+                                      imgPath="https://www.lovethegarden.com/sites/default/files/styles/header_image_xl/public/content/articles/UK_community-fun-facts-19-common-british-birds-you-can-find-your-garden_header.webp?itok=MweJ55ij"
+                                      cardParagraph="A British garden is a wondrous place that can be full of nature and can attract many different species of bird. Here are 19 of the most common birds that you are likely to spot in your garden."
+                                      hasHeader="false" hasFooter="false">
+                                <f:facet name="cardBody">
+                                    <af:panelGroupLayout id="pgl23" layout="vertical" styleClass="d-flex flex-wrap align-items-center gap-2 mt-3 fs-xl">
+                                        <af:outputText id="ot21" value="Robin" styleClass="badge bg-primary rounded-pill"/>
+                                        <af:outputText id="ot22" value="Collared Dove" styleClass="badge bg-warning rounded-pill"/>
+                                        <af:outputText id="ot23" value="Great Tit" styleClass="badge bg-info rounded-pill"/>
+                                        <af:outputText id="ot24" value="Goldfinch" styleClass="badge bg-danger rounded-pill"/>
+                                        <af:outputText id="ot25" value="Chaffinch" styleClass="badge bg-dark rounded-pill"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                                <f:facet name="cardFooter"/>
+                                <f:facet name="cardHeader"/>
+                            </skh:card>
+                        </af:panelGroupLayout>
+                    </h:panelGroup>
+                    <!--ListView Expanded-->
+                    <h:panelGroup id="pg5" layout="block" styleClass="col-lg-6 col-xl-4">
+                        <af:panelGroupLayout id="pgl2" layout="vertical"
+                                             styleClass="border rounded border rounded shadow-sm p-4">
+                            <!--Title & Techs-->
+                            <af:panelGroupLayout id="pgl6" layout="vertical" styleClass="card-title">
+                                <af:outputText id="ot17" value="ListView Expanded"/>
+                                <h:panelGroup id="pg15" layout="block" styleClass="d-flex align-items-center gap-2 mt-2 mb-2">
+                                    <af:outputText id="ot35" value="af|listView" styleClass="comp-badge bg-danger text-white"/>
+                                    <af:icon id="i3" styleClass="fa-brands fa-bootstrap bootstrap-color fa-sm"
+                                             shortDesc="Bootstrap"/>
+                                    <af:icon id="i4" styleClass="fa-brands fa-font-awesome fa-color fa-sm"
+                                             shortDesc="Font Awesome"/>
+                                </h:panelGroup>
+                            </af:panelGroupLayout>
+                            <!--Description-->
+                            <af:panelGroupLayout id="pgl14" layout="vertical" styleClass="card-desc">
+                                <af:outputText id="ot13" value="Responsive details and buttons"
+                                               styleClass="adf-far adf-fa-m feature"/>
+                                <af:outputText id="ot15" value="Can expand area has more details"
+                                               styleClass="adf-far adf-fa-m feature"/>
+                                <af:outputText id="ot36"
+                                               value='Should add "btn-block mt-2 mb-sm-0" to button styleClass'
+                                               styleClass="adf-far adf-fa-m feature memo"/>
+                                <af:outputText id="ot10"
+                                               value="Expand button refreshing whole page not specific component."
+                                               styleClass="adf-far adf-fa-m error"/>
+                            </af:panelGroupLayout>
+                            <!--Figures-->
+                            <af:panelGroupLayout id="pgl36" layout="vertical" styleClass="card-figures">
+                                <af:outputText id="ot30" value="Web View"/>
+                                <af:image id="i11" source="/resources/images/listViewExpanded-figure.png"
+                                          shortDesc="ListView Expand Figure" styleClass="img-fluid"/>
+                                <af:outputText id="ot20" value="Mobile View"/>
+                                <af:image id="i7" source="/resources/images/listViewExpanded-mobile.png"
+                                          shortDesc="ListView Expand Figure" styleClass="img-fluid"/>
+                            </af:panelGroupLayout>
+                            <!--<af:outputText id="ot13" value="Selection is #{bindings.FirstNameListExpand.inputValue}" partialTriggers="lve1"/>-->
+                            <skh:listViewExpand voName="EmployeesViewListViewExpand" id="lve1" showExpandButtons="false"
+                                                selection="single" showIconicSection="true" showActions="true"
+                                                iconicClasses="d-flex align-items-center justify-content-center"
+                                                rowsRangeSize="2">
+                                <f:facet name="actions">
+                                    <af:button actionListener="#{bindings.Commit.execute}" text="Commit" id="b3"/>
+                                    <af:button actionListener="#{bindings.Rollback.execute}" text=""
+                                               styleClass="adf-far fa-rotate-left text-white hideText" immediate="true"
+                                               id="b4">
+                                        <af:resetActionListener/>
+                                    </af:button>
+                                </f:facet>
+                                <f:facet name="mainContent">
+                                    <af:panelGroupLayout id="pgl7" layout="vertical" styleClass="">
+                                        <af:outputText id="ot5" value="#{row.FirstName}" styleClass="fw-bold fs-lg"/>
+                                        <af:outputText id="ot6" value="#{row.Email}"
+                                                       styleClass="adf-far fa-at adf-fa-m"/>
+                                        <af:outputText id="ot7" value="#{row.PhoneNumber}"
+                                                       styleClass="text-muted adf-far fa-phone adf-fa-m"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                                <f:facet name="moreDetails">
+                                    <af:panelGroupLayout id="pgl9" layout="vertical"
+                                                         styleClass="d-flex justify-content-center">
+                                        <af:outputText id="ot8" value="More Details" styleClass="text-muted fs-lg"/>
+                                    </af:panelGroupLayout>
+                                </f:facet>
+                                <f:facet name="iconicContent">
+                                    <af:icon id="i1" styleClass="adf-fas fa-alarm-clock fa-2x text-danger"/>
+                                </f:facet>
+                            </skh:listViewExpand>
+                        </af:panelGroupLayout>
+                    </h:panelGroup>
+                    <!--Panel Form Responsive-->
+                    <h:panelGroup id="pgl3" layout="block" styleClass="col-lg-6 col-xl-4" rendered="false">
+                        <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="border rounded shadow-sm p-4">
+                            <af:outputText id="ot1" value="Panel Form Responsive" styleClass="fs-xl"/>
+                            <af:outputText id="ot2" value="Auto generated by passing VO" styleClass="text-muted"/>
+                            <skh:panelFormResponsive voName="EmployeesViewRsForm" id="pfr1"/>
+                            <af:outputText id="ot3" value="Raise NullPointerException" styleClass="text-danger"/>
+                        </af:panelGroupLayout>
+                    </h:panelGroup>
+                </h:panelGroup>
+            </h:panelGroup>
+        </af:form>
+        <f:facet name="metaContainer">
+            <f:verbatim>              <meta name="viewport"
+                                            content="width=device-width, initial-scale=1, minimum-scale=1"/>            </f:verbatim>
+        </f:facet>
+    </af:document>
+</f:view>
